@@ -26,7 +26,7 @@ SECRET_KEY = 'p9g^8y00!or-&qz-7qr-3q(&@d88f4*6ega_#i&xpt#14+%*hq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dog-breed-ap.herokuapp.com',]
 
 
 # Application definition
