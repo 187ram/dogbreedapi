@@ -1,4 +1,4 @@
-absl-py
+
 asgiref==3.3.1
 astunparse==1.6.3
 cachetools==4.2.1
@@ -53,7 +53,7 @@ tensorboard==2.4.1
 tensorboard-plugin-wit==1.8.0
 tensorflow-estimator==2.4.0
 termcolor==1.1.0
--i https://google-coral.github.io/py-repo/ tflite_runtime
+--extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime
 threadpoolctl==2.1.0
 tifffile
 typing-extensions==3.7.4.3
