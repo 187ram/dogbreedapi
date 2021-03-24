@@ -1,5 +1,5 @@
 import os
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
 import numpy as np
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -48,7 +48,7 @@ def breed(request):
 		imgData = request.data
 		imgData = load(base64_file(imgData))
 		model_path = os.path.join(BASE_DIR,'tmpcizky496.tflite')
-		interpreter = tf.lite.Interpreter(model_path)
+		interpreter = tflite.Interpreter(model_path)
 		interpreter.allocate_tensors()
 		input_details = interpreter.get_input_details()
 		output_details = interpreter.get_output_details()
@@ -56,7 +56,7 @@ def breed(request):
 		interpreter.invoke()
 		output_data = interpreter.get_tensor(output_details[0]['index'])
 		id = int(np.argmax(output_data, axis = 1))
-		return JsonResponse('Your Status is {}'.format(column_names[id]), safe=False)
+		return JsonResponse('breed : {} score : {}'.format(column_names[id],max(output_data[0])), safe=False)
 
 	except ValueError as e:
 		return Response(e.args[0], status.HTTP_400_BAD_REQUEST)
