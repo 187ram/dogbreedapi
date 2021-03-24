@@ -61,3 +61,4 @@ Werkzeug==1.0.1
 whitenoise==5.2.0
 wrapt==1.12.1
 zipp==3.4.1
+-i https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_x86_64.whl
