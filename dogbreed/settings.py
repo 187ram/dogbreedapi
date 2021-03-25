@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     #my app
     'cnnapi',
     #rest app
-
+    'rest_framework',
     #django app
     'django.contrib.admin',
     'django.contrib.auth',
