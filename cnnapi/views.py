@@ -1,5 +1,6 @@
 import os
-import tflite_runtime.interpreter as tflite
+#import tflite_runtime.interpreter as tflite
+import tensorflow as tf
 import numpy as np
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -48,7 +49,8 @@ def breed(request):
 		imgData = request.data
 		imgData = load(base64_file(imgData))
 		model_path = os.path.join(BASE_DIR,'tmpcizky496.tflite')
-		interpreter = tflite.Interpreter(model_path)
+		#interpreter = tflite.Interpreter(model_path)
+		interpreter = tf.lite.Interpreter(model_path)
 		interpreter.allocate_tensors()
 		input_details = interpreter.get_input_details()
 		output_details = interpreter.get_output_details()

@@ -21,6 +21,6 @@ scikit-image==0.18.1
 scipy==1.6.2
 six==1.15.0
 sqlparse==0.4.1
--i https://google-coral.github.io/py-repo/ tflite_runtime
+tflite-runtime==2.5.0
 tifffile==2021.3.17
 whitenoise==5.2.0

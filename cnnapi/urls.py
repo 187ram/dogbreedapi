@@ -6,5 +6,5 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
 
-    path('breed/', views.breed),
+    path('', views.breed),
 ] 
